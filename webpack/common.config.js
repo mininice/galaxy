@@ -12,7 +12,7 @@ const client = resolve(root, 'client')
 const entryContext = resolve(client, 'pages')
 const webroot = resolve(root, 'webroot')
 
-const webAssetsDir = 'app-proto-vue'
+const webAssetsDir = 'assets'
 
 const entries = {}
 fs.readdirSync(entryContext)

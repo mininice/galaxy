@@ -41,9 +41,6 @@ gulp.task('client-bundle', done =>
 
 gulp.task('bundle', ['server-bundle', 'client-bundle'])
 
-gulp.task('server-bundle-watch', done =>
-  serverBundle.watch(100, watchLogger(done))
-)
 
 gulp.task('client-bundle-watch', done =>
   clientBundle.watch(100, watchLogger(done))
@@ -60,15 +57,13 @@ gulp.task('run', ['clean-bundle', 'client-bundle'], () => {
       '*.spec.*',
       'resources/*',
       'bootstrap/*',
-      'server/templates/assets.json',
       'client/bundles/*',
     ],
-    watch: ['./apps', './index.source.js'],
+    watch: ['./client', './server.js'],
   }).on('start', () => logger('Main process started. watching...'))
     .on('crash', () => logger('Main process crashed.'))
     .on('quit', () => process.exit())
     .on('restart', files => {
-      serverBundle.run(buildLogger(emptyFunc))
       clientBundle.run(buildLogger(emptyFunc))
 
       if (files) {

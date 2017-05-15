@@ -14,13 +14,9 @@ import DS from '@utils/ds.js'
 
 export default {
   components: {
-    Buttons
-  },
-  mounted () {
-    $('.app-left').css('height', $(document).height());
   },
   name: 'app',
-  data () {
+  data: function() {
   	return {
      
   	}

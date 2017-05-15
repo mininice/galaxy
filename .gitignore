@@ -1,8 +1,7 @@
 build/
 /client/bundles
 /webroot/webpack
-/webroot/app-proto*
-/server/templates/assets.json
+/webroot/assets*
 /letsencrypt/*
 
 # 需要保留的空文件夹内可创建一个 .gitkeep 空文件

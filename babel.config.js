@@ -11,7 +11,7 @@ const root = __dirname
 const client = join(root, './client')
 
 const moduleAlias = {
-  '@client': './components',
+  '@client': './client',
   '@webpack': './webpack',
 }
 

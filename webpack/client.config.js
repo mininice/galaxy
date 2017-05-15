@@ -1,17 +1,12 @@
 const fs = require('fs')
 const path = require('path')
+const webpack = require('webpack')
 const AssetsPlugin = require('assets-webpack-plugin')
 const webpackConfig = module.exports = require('./common.config')
-const assetsPluginInstance = new AssetsPlugin({
-  filename: 'assets.json',
-  path: path.join(__dirname, '..', 'server', 'templates'),
-})
 
 const dev = process.env.NODE_ENV !== 'production'
 
 webpackConfig.plugins = webpackConfig.plugins || []
-
-webpackConfig.plugins.push(assetsPluginInstance)
 
 const resolve = path.resolve
 const client = path.resolve(__dirname, '../client')
