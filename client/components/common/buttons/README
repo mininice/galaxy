@@ -1,0 +1,31 @@
+<template>
+    <Buttons @click="clickMe">click</Buttons>
+    <Buttons disabled>disabled</Buttons>
+    <Buttons html-type="submit" @click="submitMe">submit</Buttons>
+    <Buttons size="small">small</Buttons>
+    <hr />
+    <Buttons type="primary">primary</Buttons>
+    <Buttons type="success">success</Buttons>
+    <Buttons type="loading">loading</Buttons>
+    <Buttons type="warning">warning</Buttons>
+    <Buttons type="info">info</Buttons>
+    <Buttons type="danger">danger</Buttons>
+</template>
+
+<script>
+    import Buttons from 'src'
+
+    export default {
+        methods: {
+            clickMe() {
+                alert('点击演示')
+            },
+            submitMe(event) {
+                alert(event.target.type)
+            }
+        },
+        components: {
+            Buttons
+        }
+    }
+</script>

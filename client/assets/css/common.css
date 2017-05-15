@@ -1,0 +1,24 @@
+body {
+	font-size: 14px;
+}
+.link a {
+    cursor: pointer;
+    color: #ec5f47;
+    background: #fff;
+}
+
+.link a:hover {
+    color: #de8c7e;
+}
+
+
+.font-success {
+	color: #42d885;
+}
+.font-info {
+	color: #73ccff;
+}
+
+.font-primary {
+	color: #ec5f47;
+}
