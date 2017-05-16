@@ -13,7 +13,7 @@
   </div>
   
   <div class="app-footer">
-      @CopyWriter 2017
+      @copyright ©2017
   </div>
 </div>
 
