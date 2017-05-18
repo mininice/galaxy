@@ -6,7 +6,7 @@
             <th>x</th>    
             <th>x</th>    
         </tr>
-          <tr  v-for="item in a">
+          <tr v-for="item in a">
             <td>{{item.x}}</td>
             <td>{{item.y}}</td>
             <td>{{item.test}}</td>

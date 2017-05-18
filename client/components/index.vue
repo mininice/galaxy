@@ -40,7 +40,6 @@
         },
         methods: {},
         watch: {}
-
     }
 </script>
 
@@ -56,16 +55,17 @@
         display: flex;
         min-height: 600px;
         border: 1px solid #ddd;
+        font-size: 14px;
     }
     
     .app-sidebar {
-        width: 20%;
+        width: 30%;
         align-items: stretch;
     }
     
     .app-content {
         border-left: 1px solid #ddd;
-        width: 80%;
+        width: 70%;
         align-items: stretch;
     }
     

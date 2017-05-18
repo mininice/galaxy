@@ -1,5 +1,4 @@
-import Vue from 'vue'
-
+import Vue from 'vue';
 
 const VueResource = require('vue-resource').default;
 Vue.use(VueResource);

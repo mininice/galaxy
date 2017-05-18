@@ -8,24 +8,32 @@
         </div>
     </div>
     <div class="side-index">
-        检索条件:
-        
+        检索日志类型:
+        <select v-model="logType">
+            <option  v-for="(item, type) in config.logType" :value="type">{{item}}</option>
+        </select>
+        <Index :logType="logType"></Index>
     </div>
-
 </div>
 </template>
 <script>
+    import config from '@utils/config';
+    import Index from '@components/dynamicIndex.vue';
+
     export default {
-        name: 'app-sidebar',
-        props: {
-            //title: String
+        components: {
+            Index
         },
+        name: 'app-sidebar',
+        props: {},
         data() {
             return {
                 user: {
                     name: localStorage.getItem('name') || "",
                     password: localStorage.getItem('pass') || ""
-                }
+                },
+                logType: "index1",
+                config: config
             }
         },
         methods: {
@@ -56,5 +64,11 @@
     .user-info input {
         padding: 3px;
         margin: 5px 0;
+    }
+    
+    .side-index select {
+        margin-bottom: 10px;
+        height: 28px;
+        width: 80%;
     }
 </style>
