@@ -1,0 +1,11 @@
+# Node
+V6.0.0以上
+
+# npm
+
+npm install
+
+# run
+gulp run
+
+访问localhost:8080/index
